@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 		for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
 			if (CallerIdentityService.class.getName().equals(service.service.getClassName())) {
 				((ToggleButton) findViewById(R.id.serviceToggleButton)).setChecked(true);
+				return;
 			}
 		}
 	}
